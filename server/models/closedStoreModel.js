@@ -5,4 +5,4 @@ const closedStoresSchema = new Schema({
   storeId: { type: String, required: true, unique: true },
 });
 
-module.exports = mongoose.model('ClosedStores', closedStoresSchema);
+module.exports = mongoose.model('closedStores', closedStoresSchema);

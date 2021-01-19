@@ -6,15 +6,12 @@ const PORT = 3000; // this is your port 👈
 
 // requiring mongoose
 const mongoose = require('mongoose');
+const { MongoURI } = require('./settings')
 
 // requiring routers here
 const apiRouter = require('./routes/api.js');
 const signupRouter = require('./routes/signup.js');
 const loginRouter = require('./routes/login.js');
-
-// please don't attack my database 😤🥳🤪
-const MongoURI =
-  'mongodb+srv://shahDBA:shahDBA123@clusterfudge.lrsuc.mongodb.net/locally?retryWrites=true&w=majority';
 
 mongoose.connect(MongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', () => {

@@ -6,7 +6,6 @@ const client = yelp.client(
 const ClosedStores = require("../models/closedStoreModel.js");
 
 const mainController = {};
-// sup Anson and Daniel. Check this out 😮‍💨 lol. fart emoji haha 💩 lol
 mainController.getResults = (req, res, next) => {
   const { term, longitude, latitude } = req.body;
 
